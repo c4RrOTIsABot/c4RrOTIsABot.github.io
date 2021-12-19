@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,12 +8,15 @@ p {
   font-size: 60px;
   margin-top: 0px;
 }
+</style>
+</head>
+<body>
 
-  <p id="time"></p>
+<p id="demo"></p>
 
-  <script>
+<script>
 // Set the date we're counting down to
-var countDownDate = new Date("Dec 5, 2023 20:32:19").getTime();
+var countDownDate = new Date("Jan 5, 2022 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -31,14 +34,17 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("time").innerHTML = days + "d " + hours + "h "
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
-  
+  // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("time").innerHTML = "0D 0H 0M 0S";
+    document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+</script>
 
-<!Hello there snoopy!>
+</body>
+</html>
+
