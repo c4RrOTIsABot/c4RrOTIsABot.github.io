@@ -37,7 +37,7 @@ body {margin:0;}
 </head>
 <body>
   <p id="demo"></p>
-<p id="demo"></p>
+<p id="time"></p>
 
 <div class="navbar">
   <a href="#home">Home</a>
@@ -69,13 +69,13 @@ var x = setInterval(function() {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  document.getElementById("time").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s ";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "0D 0H 0M 0S";
+    document.getElementById("time").innerHTML = "0D 0H 0M 0S";
   }
 }, 1000);
 </script>
